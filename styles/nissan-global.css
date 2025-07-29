@@ -78,7 +78,7 @@ header nav .section>div {
             min-height: 200px;
             background: linear-gradient(0deg, #000, #000 68%, rgba(0, 0, 0, 0.0001));
 
-            font-family: "Nissan Light", "Nissan Regular", Verdana, Arial, sans-serif;
+            font-family: lato, sans-serif;
             font-size: 18px;
             line-height: 31px;
             letter-spacing: 1.03px;
@@ -340,7 +340,7 @@ a.button {
             text-decoration: none;
             border-radius: 40px;
             display: inline-block;
-            font-family: "Nissan Bold", Verdana, Arial, sans-serif;
+            font-family: lato, sans-serif;
             font-size: 16px;
             letter-spacing: 2px;
             line-height: 24px;
@@ -352,7 +352,7 @@ a.button {
         &:link,
         &:visited,
         &:hover {
-            font-family: "Nissan Bold", "Nissan Regular", Verdana, Arial, sans-serif;
+            font-family: lato, sans-serif;
             font-size: 1.75rem;
             font-weight: 700;
             letter-spacing: 1.9px;
@@ -405,7 +405,7 @@ main .section.carvelo-offer-section {
     }
 
     & p {
-        font-family: "Nissan Regular", Verdana, Arial, sans-serif;
+        font-family: lato, sans-serif;
         font-size: 16px;
         font-weight: 400;
         letter-spacing: .9px;
@@ -416,7 +416,7 @@ main .section.carvelo-offer-section {
     }
 
     & h2 {
-        font-family: "Nissan Regular", Verdana, Arial, sans-serif;
+        font-family: lato, sans-serif;
         font-weight: 400;
         letter-spacing: 1.5px;
         text-transform: none;
@@ -443,7 +443,7 @@ main .section.carvelo-faq-block {
 
     & h2 {
         padding: 80px 0;
-        font-family: "Nissan Regular", Verdana, Arial, sans-serif;
+        font-family: lato, sans-serif;
         font-size: 68px;
         letter-spacing: 2.43px;
         line-height: 1.15;
@@ -473,7 +473,7 @@ main .section.carvelo-faq-block {
         border-color: #020a0d;
 
         &>p {
-            font-family: "Nissan Bold", Verdana, Arial, sans-serif;
+            font-family: lato, sans-serif;
             font-weight: 700;
             font-size: 16px;
             letter-spacing: 1.5px;
@@ -487,7 +487,7 @@ main .section.carvelo-faq-block {
         background-color: transparent;
 
         &>p {
-            font-family: "Nissan Light", Verdana, Arial, sans-serif;
+            font-family: lato, sans-serif;
             font-size: 16px;
             font-weight: 300;
             letter-spacing: 1.5px;

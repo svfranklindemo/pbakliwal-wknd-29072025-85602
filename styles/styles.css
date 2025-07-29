@@ -19,10 +19,10 @@
     /*--heading-font-family: 'Source Serif Pro', 'Source-Serif-Pro-Fallback', sans-serif;*/
     /*--type-base-font-family: 'Source Sans Pro', roboto, roboto-fallback, sans-serif;*/
 
-    /* Font Family  */
-    --heading-font-family: "Nissan Regular", Verdana, Arial, sans-serif;
-    --type-base-font-family: "Nissan Regular", Verdana, Arial, sans-serif;
-    --type-light-font-family: "Nissan Light", Verdana, Arial, sans-serif;
+    /* font family variables (Nissan Rebranding Project) */
+    --heading-font-family: lato, sans-serif;
+    --type-base-font-family: lato, sans-serif;
+    --type-light-font-family: lato, sans-serif;
 
 
     /* body sizes */

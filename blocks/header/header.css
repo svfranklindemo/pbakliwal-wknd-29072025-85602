@@ -103,7 +103,7 @@ header nav p {
 header nav a:any-link {
   color: currentcolor;
   text-transform: uppercase;
-  font-size: var(--body-font-size-xxs);
+  font-size: 12px;
   letter-spacing: 0.16em;
 }
 
@@ -206,7 +206,7 @@ header nav .nav-brand a {
 }
 
 header nav .nav-brand img {
-  width: 120px;
+  width: 47px;
   height: auto;
   filter: invert(1);
 }
