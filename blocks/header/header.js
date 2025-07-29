@@ -87,21 +87,45 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 function addAnimation() {
-  window.addEventListener('scroll', () => {
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  function updateHeader() {
     const header = document.getElementsByClassName('header-nav-wrapper')[0];
     const scrollPosition = window.scrollY;
     const viewportWidth = window.innerWidth;
 
     if (viewportWidth > 900) {
-      if (scrollPosition > 168) {
-        header.classList.add('minimized');
-      } else {
-        header.classList.remove('minimized');
+      // On scroll down, hide the header
+      if (scrollPosition > lastScrollY && scrollPosition > 68) {
+        header.classList.add('hidden');
+      } 
+      // On scroll up, show the header
+      else if (scrollPosition < lastScrollY) {
+        header.classList.remove('hidden');
+      }
+
+      // If we're at the top, always show the header
+      if (scrollPosition <= 10) {
+        header.classList.remove('hidden');
       }
     } else {
-      header.classList.remove('minimized');
+      // On mobile, always show the header
+      header.classList.remove('hidden');
     }
-  });
+
+    lastScrollY = scrollPosition;
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestTick);
 }
 
 function setActiveTab() {
