@@ -1,0 +1,6 @@
+.cfrenderer-container {
+    background-color: var(--light-color);
+}
+.cfrenderer-container .cfrenderer-error-block {
+    color: red;
+}

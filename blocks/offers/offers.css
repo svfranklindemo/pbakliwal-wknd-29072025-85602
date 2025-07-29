@@ -1,0 +1,104 @@
+.offers-wrapper {
+
+    & > .offers {
+        display: flex;
+        gap: 40px;
+
+        align-items: center;
+
+        @media (width < 768px) {
+            flex-direction: column;
+        }
+
+        & > .offer-container {
+            flex: 1;
+
+            & .top-section {
+                min-height: 108px;
+
+                @media (width < 768px) {
+                    min-height: unset;
+                }
+            }
+            & h4 {
+                font-family: "Nissan Bold", Verdana, Arial, sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                line-height: 26px;
+                text-transform: none;
+                margin: 0 0 10px;
+
+
+            }
+
+            & h3 {
+                font-size: 24px;
+                line-height: 34px;
+
+                font-family: "Nissan Regular", Verdana, Arial, sans-serif;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                text-transform: none;
+                margin: 0;
+            }
+
+            & h5 {
+                font-family: "Nissan Regular", Verdana, Arial, sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: .9px;
+                line-height: 26px;
+                text-transform: none;
+                margin: 0;
+            }
+
+            & .offer-detail-model {
+                display: none;
+
+
+                & > h5{
+                    display: inline;
+
+                    @media (width < 768px) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        & .offer-detail-image {
+            padding: 20px 0;
+            width: 100%;
+
+            & img {
+                width: 100%;
+            }
+
+            & .image-disclaimer {
+                font-family: "Nissan Regular", Verdana, Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: .9px;
+                line-height: 24px;
+                text-transform: none;
+                margin-top: 20px;
+            }
+        }
+
+        & .classic-offer-cta {
+            border-bottom: 3px solid #000;
+            color: #000;
+            cursor: pointer;
+            line-height: 24px;
+            padding-bottom: 8px;
+            text-decoration: none;
+
+            font-family: "Nissan Bold", Verdana, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: none;
+        }
+    }
+}
