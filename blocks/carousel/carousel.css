@@ -72,6 +72,10 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+      position: absolute;
+      z-index: 1000;
+      left: 1%;
+      top: 80%;
 }
 
 .carousel .carousel-slide-indicator button {

@@ -1,0 +1,12 @@
+.section.hero-carousel.carousel-container{
+    padding: 0;
+
+    @media (width >= 1024px) {
+        .carousel-wrapper{
+            width: 100% !important;
+            .carousel-slide{
+                min-height: 700px !important;
+            }
+        }
+    }
+}
