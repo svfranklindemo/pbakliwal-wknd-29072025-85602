@@ -16,6 +16,17 @@ function updateActiveSlide(slide) {
         link.removeAttribute('tabindex');
       }
     });
+
+    // Handle video lazy loading
+    if (idx === slideIndex) {
+      loadSlideMedia(aSlide);
+    } else {
+      // Pause videos on inactive slides
+      const video = aSlide.querySelector('video');
+      if (video) {
+        video.pause();
+      }
+    }
   });
 
   const indicators = block.querySelectorAll('.carousel-slide-indicator');
@@ -26,6 +37,22 @@ function updateActiveSlide(slide) {
       indicator.querySelector('button').setAttribute('disabled', 'true');
     }
   });
+}
+
+function loadSlideMedia(slide) {
+  // Load and play videos when slide becomes active
+  const video = slide.querySelector('video[data-src]');
+  if (video) {
+    const src = video.getAttribute('data-src');
+    video.src = src;
+    video.removeAttribute('data-src');
+    // Wait for video to load before playing
+    video.addEventListener('loadeddata', () => {
+      video.play().catch(() => {
+        // Handle autoplay failure silently
+      });
+    });
+  }
 }
 
 function showSlide(block, slideIndex = 0) {
@@ -70,6 +97,82 @@ function bindEvents(block) {
   });
 }
 
+function isVideoUrl(url) {
+  return url && url.toLowerCase().endsWith('.mp4');
+}
+
+function createVideoElement(src) {
+  const video = document.createElement('video');
+  video.setAttribute('data-src', src); // Use data-src for lazy loading
+  video.setAttribute('autoplay', '');
+  video.setAttribute('muted', '');
+  video.setAttribute('loop', '');
+  video.setAttribute('playsinline', '');
+  video.style.height = '100%';
+  video.style.width = '100%';
+  video.style.objectFit = 'cover';
+  return video;
+}
+
+function processSlideMedia(slide) {
+  // Find anchor elements that contain video URLs
+  const links = slide.querySelectorAll('a');
+  
+  links.forEach((link) => {
+    const href = link.getAttribute('href');
+    const linkText = link.textContent.trim();
+    
+    // Check if the link href or text content is a video URL
+    if ((href && isVideoUrl(href)) || (linkText && isVideoUrl(linkText))) {
+      const videoUrl = href && isVideoUrl(href) ? href : linkText;
+      const video = createVideoElement(videoUrl);
+      
+      // Replace the entire parent div containing the link with video
+      const parentDiv = link.closest('div');
+      if (parentDiv) {
+        // Create a new div to contain the video (to maintain structure)
+        const videoContainer = document.createElement('div');
+        videoContainer.appendChild(video);
+        parentDiv.replaceWith(videoContainer);
+      } else {
+        // Fallback: replace just the link
+        link.replaceWith(video);
+      }
+    }
+  });
+
+  // Also handle existing picture/img elements (keep existing functionality)
+  const pictures = slide.querySelectorAll('picture');
+  
+  pictures.forEach((picture) => {
+    const img = picture.querySelector('img');
+    if (img && img.src && isVideoUrl(img.src)) {
+      // Replace img with video element
+      const video = createVideoElement(img.src);
+      img.replaceWith(video);
+    }
+    
+    // Also check source elements for different breakpoints
+    const sources = picture.querySelectorAll('source');
+    sources.forEach((source) => {
+      if (source.srcset && isVideoUrl(source.srcset)) {
+        // If we find a video source, replace the entire picture with video
+        const video = createVideoElement(source.srcset);
+        picture.replaceWith(video);
+      }
+    });
+  });
+
+  // Also handle direct img elements (not inside picture)
+  const directImages = slide.querySelectorAll('img:not(picture *)');
+  directImages.forEach((img) => {
+    if (img.src && isVideoUrl(img.src)) {
+      const video = createVideoElement(img.src);
+      img.replaceWith(video);
+    }
+  });
+}
+
 function createSlide(row, slideIndex, carouselId) {
   const slide = document.createElement('li');
   slide.dataset.slideIndex = slideIndex;
@@ -80,6 +183,9 @@ function createSlide(row, slideIndex, carouselId) {
     column.classList.add(`carousel-slide-${colIdx === 0 ? 'image' : 'content'}`);
     slide.append(column);
   });
+
+  // Process media after adding columns to slide
+  processSlideMedia(slide);
 
   const labeledBy = slide.querySelector('h1, h2, h3, h4, h5, h6');
   if (labeledBy) {
@@ -146,5 +252,16 @@ export default async function decorate(block) {
 
   if (!isSingleSlide) {
     bindEvents(block);
+    // Load media for the first slide initially
+    const firstSlide = block.querySelector('.carousel-slide');
+    if (firstSlide) {
+      loadSlideMedia(firstSlide);
+    }
+  } else {
+    // For single slides, load media immediately
+    const singleSlide = block.querySelector('.carousel-slide');
+    if (singleSlide) {
+      loadSlideMedia(singleSlide);
+    }
   }
 }
