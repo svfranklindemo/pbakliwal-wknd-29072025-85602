@@ -5,6 +5,8 @@ function createVideoElement(videoUrl) {
   video.setAttribute('muted', 'muted');
   video.setAttribute('playsinline', 'true');
   video.setAttribute('preload', 'none');
+  video.muted = true; // Ensure muted property is set
+  video.volume = 0; // Set volume to 0 as additional safeguard
   video.classList.add('video-element', 'lazy-load');
   
   const source = document.createElement('source');
@@ -18,10 +20,13 @@ function createVideoElement(videoUrl) {
 function loadVideo(video) {
   const source = video.querySelector('source[data-src]');
   if (source) {
-    source.setAttribute('src', source.getAttribute('data-src'));
+    const videoUrl = source.getAttribute('data-src');
+    source.setAttribute('src', videoUrl);
     source.removeAttribute('data-src');
     video.load();
+    return true;
   }
+  return false;
 }
 
 function createProgressBar() {
@@ -49,12 +54,12 @@ function createShowMoreLess(textElement) {
   const showMoreBtn = document.createElement('span');
   showMoreBtn.classList.add('show-more');
   showMoreBtn.textContent = 'Show more';
-  showMoreBtn.style.display = 'none';
+  showMoreBtn.style.display = 'inline';
   
   const showLessBtn = document.createElement('span');
   showLessBtn.classList.add('show-less');
   showLessBtn.textContent = 'Show less';
-  showLessBtn.style.display = 'inline';
+  showLessBtn.style.display = 'none';
   
   showMoreContainer.appendChild(showMoreBtn);
   showMoreContainer.appendChild(showLessBtn);
@@ -77,8 +82,9 @@ function createShowMoreLess(textElement) {
   return showMoreContainer;
 }
 
-function setActiveSlide(slides, activeIndex) {
-  slides.forEach((slide, index) => {
+function setActiveSlide(allSlides, activeSlideIndex) {
+  // Stop all videos and remove active state
+  allSlides.forEach((slide, index) => {
     slide.classList.remove('active-slide');
     const video = slide.querySelector('video');
     const progressBar = slide.querySelector('.progress-bar');
@@ -86,58 +92,96 @@ function setActiveSlide(slides, activeIndex) {
     if (video) {
       video.pause();
       video.currentTime = 0;
+      // Remove existing event listeners to prevent duplicates
+      video.removeEventListener('timeupdate', video._progressHandler);
       if (progressBar) {
         progressBar.style.width = '0%';
       }
     }
+  });
+  
+  // Set the specific slide as active
+  const activeSlide = allSlides[activeSlideIndex];
+  if (activeSlide) {
+    activeSlide.classList.add('active-slide');
+    const video = activeSlide.querySelector('video');
+    const progressBar = activeSlide.querySelector('.progress-bar');
     
-    if (index === activeIndex) {
-      slide.classList.add('active-slide');
-      if (video) {
-        loadVideo(video);
-        video.addEventListener('loadedmetadata', () => {
-          video.play().catch(e => console.log('Video autoplay failed:', e));
-        });
-        
-        if (progressBar) {
-          video.addEventListener('timeupdate', () => {
-            updateProgress(video, progressBar);
-          });
+    if (video) {
+      // Load video if not already loaded
+      const wasLoaded = loadVideo(video);
+      
+      // Create progress handler function
+      if (progressBar) {
+        video._progressHandler = () => updateProgress(video, progressBar);
+        video.addEventListener('timeupdate', video._progressHandler);
+      }
+      
+      // Add event listener to enforce muted state
+      video.addEventListener('volumechange', () => {
+        if (!video.muted || video.volume > 0) {
+          video.muted = true;
+          video.volume = 0;
         }
+      });
+      
+      // Play the video
+      const playVideo = () => {
+        // Ensure video is always muted before playing
+        video.muted = true;
+        video.volume = 0;
+        
+        video.play().catch(e => {
+          console.log('Video autoplay failed:', e);
+          // Try to play again after a short delay
+          setTimeout(() => {
+            // Ensure muted state on retry as well
+            video.muted = true;
+            video.volume = 0;
+            video.play().catch(err => console.log('Video play retry failed:', err));
+          }, 100);
+        });
+      };
+      
+      if (wasLoaded) {
+        video.addEventListener('loadeddata', playVideo, { once: true });
+      } else {
+        // Video already loaded, play immediately
+        playVideo();
       }
     }
-  });
+  }
 }
 
-function showSlideGroup(block, groupIndex = 0) {
+function showSlideGroup(block, activeSlideIndex = 0) {
   const slides = block.querySelectorAll('.video-slide');
-  const slidesPerGroup = 4;
-  const totalGroups = Math.ceil(slides.length / slidesPerGroup);
+  const totalSlides = slides.length;
+  const slidesToShow = 4;
   
-  // Ensure groupIndex is within bounds
-  if (groupIndex >= totalGroups) groupIndex = 0;
-  if (groupIndex < 0) groupIndex = totalGroups - 1;
+  // Ensure activeSlideIndex is within bounds (with looping)
+  if (activeSlideIndex >= totalSlides) activeSlideIndex = activeSlideIndex % totalSlides;
+  if (activeSlideIndex < 0) activeSlideIndex = ((activeSlideIndex % totalSlides) + totalSlides) % totalSlides;
   
-  block.setAttribute('data-active-group', groupIndex);
+  block.setAttribute('data-active-slide', activeSlideIndex);
   
-  const startIndex = groupIndex * slidesPerGroup;
-  const endIndex = Math.min(startIndex + slidesPerGroup, slides.length);
-  
-  // Hide all slides
+  // Hide all slides first and reset order
   slides.forEach(slide => {
     slide.style.display = 'none';
-    slide.classList.remove('active-slide');
+    slide.style.transform = ''; // Clear any transforms
+    slide.style.opacity = '';   // Clear any opacity changes
+    slide.style.order = '';     // Clear any order changes
   });
   
-  // Show current group of slides
-  for (let i = startIndex; i < endIndex; i++) {
-    slides[i].style.display = 'block';
+  // Show 4 slides starting from activeSlideIndex (with looping) and set their visual order
+  for (let i = 0; i < slidesToShow; i++) {
+    const slideIndex = (activeSlideIndex + i) % totalSlides;
+    const slide = slides[slideIndex];
+    slide.style.display = 'block';
+    slide.style.order = i; // Set visual order: active slide gets order 0 (first position)
   }
   
-  // Set first slide of the group as active
-  if (slides[startIndex]) {
-    setActiveSlide(Array.from(slides).slice(startIndex, endIndex), 0);
-  }
+  // Set the first visible slide (activeSlideIndex) as active
+  setActiveSlide(Array.from(slides), activeSlideIndex);
 }
 
 function bindEvents(block) {
@@ -145,32 +189,29 @@ function bindEvents(block) {
   const prevBtn = block.querySelector('.slide-prev');
   const nextBtn = block.querySelector('.slide-next');
   
-  // Navigation buttons
+  // Navigation buttons - move one slide at a time
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-      const currentGroup = parseInt(block.getAttribute('data-active-group') || '0');
-      showSlideGroup(block, currentGroup - 1);
+      const currentActiveSlide = parseInt(block.getAttribute('data-active-slide') || '0');
+      const newActiveSlide = currentActiveSlide - 1;
+      showSlideGroup(block, newActiveSlide);
     });
   }
   
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      const currentGroup = parseInt(block.getAttribute('data-active-group') || '0');
-      showSlideGroup(block, currentGroup + 1);
+      const currentActiveSlide = parseInt(block.getAttribute('data-active-slide') || '0');
+      const newActiveSlide = currentActiveSlide + 1;
+      showSlideGroup(block, newActiveSlide);
     });
   }
   
-  // Click on slides to make them active
-  slides.forEach((slide, index) => {
+  // Click on slides to make them active and shift to first position
+  slides.forEach((slide, slideIndex) => {
     slide.addEventListener('click', () => {
-      const currentGroup = parseInt(block.getAttribute('data-active-group') || '0');
-      const startIndex = currentGroup * 4;
-      const endIndex = Math.min(startIndex + 4, slides.length);
-      const visibleSlides = Array.from(slides).slice(startIndex, endIndex);
-      const slideIndexInGroup = visibleSlides.indexOf(slide);
-      
-      if (slideIndexInGroup !== -1) {
-        setActiveSlide(visibleSlides, slideIndexInGroup);
+      // Only respond to clicks on visible slides
+      if (slide.style.display !== 'none') {
+        showSlideGroup(block, slideIndex);
       }
     });
   });
@@ -262,7 +303,7 @@ export default async function decorate(block) {
   container.appendChild(navButtons);
   block.appendChild(container);
   
-  // Initialize carousel
+  // Initialize carousel - start with first slide active
   showSlideGroup(block, 0);
   bindEvents(block);
   
