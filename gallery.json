@@ -1,0 +1,38 @@
+{
+  "total": 5,
+  "offset": 0,
+  "limit": 5,
+  "data": [
+    {
+      "colorName": "DEEP FOREST",
+      "colorHex": "#282d22",
+      "imageLink": "https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_1eee56723585143994c93b618e324acb7d528b8a1.png"
+    },
+    {
+      "colorName": "RED RAGE",
+      "colorHex": "#c20d0e",
+      "imageLink": "https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_18ed05c2a07304cddbc405322d401d97343a28418.png"
+    },
+    {
+      "colorName": "EVEREST WHITE",
+      "colorHex": "#cfcdcd",
+      "imageLink": "https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_1176d77174f3af2b0556355930f1272692f3d253e.png"
+    },
+    {
+      "colorName": "STEALTH BLACK",
+      "colorHex": "#060505",
+      "imageLink": "https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_1645f5991e3dffbdd06df9f6cf636d408f9402c5e.png"
+    },
+    {
+      "colorName": "DEEP GREY",
+      "colorHex": "#575a63",
+      "imageLink": "https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_1a20f4b130086ec3924123473f1c79d77e740915e.png"
+    }
+  ],
+  "columns": [
+    "colorName",
+    "colorHex",
+    "imageLink"
+  ],
+  ":type": "sheet"
+} 

@@ -1,0 +1,242 @@
+.gallery-block {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Image Area */
+.background-display {
+    width: 100%;
+    height: 443px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000; /* Default background color */
+    overflow: hidden;
+}
+
+/* Gallery Header */
+.gallery-header {
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+/* Mode Selection */
+.mode-selection {
+    display: flex;
+    gap: 24px;
+}
+
+.mode-option {
+    background: transparent;
+    border: none;
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.mode-option.active {
+    color: #fff;
+}
+
+.mode-option.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* Day/Night Toggle */
+.day-night-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.day-night-toggle.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.toggle-label {
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch.active {
+    background-color: #fff;
+}
+
+.toggle-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-switch.active .toggle-knob {
+    transform: translateX(24px);
+    background-color: #333;
+}
+
+/* Car Display Area */
+.car-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    transition: opacity 0.3s ease;
+}
+
+/* Color Selection */
+.color-selection {
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.color-name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 94px;
+    min-width: 200px;
+}
+
+.color-options {
+    display: flex;
+    gap: 12px;
+}
+
+.color-option {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #7b7b7b;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.active {
+    border: 3px solid #7b7b7b;
+}
+
+
+
+/* Background Mode Styles */
+.gallery-block.studio .background-display {
+    background-color: #dfdfdf !important;
+    background-image: none !important;
+}
+
+.gallery-block.outdoor-night .background-display {
+    background-image: url('https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_1fe92986eb6a8dc9bc45286182cdde517e4a40fcd.png');
+}
+
+.gallery-block.outdoor-day .background-display {
+    background-image: url('https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_18cc07bd80e17dd8d32204e408f95aa04801754ae.png');
+}
+
+
+
+/* Loading State */
+.car-image.loading {
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .background-display {
+        height: 320px;
+    }
+    
+    .gallery-header {
+        padding: 16px;
+    }
+    
+    .mode-selection {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .mode-option {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    
+    .car-display {
+        width: 90%;
+        height: 50%;
+    }
+    
+    .color-selection {
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .color-name {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    
+    .color-option {
+        width: 28px;
+        height: 28px;
+    }
+}
