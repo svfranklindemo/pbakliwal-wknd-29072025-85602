@@ -20,6 +20,10 @@
     background-color: #19191d;
 }
 
+.bg-black-3 {
+    background-color: #19191d;
+}
+
 .fixed-width-container > div {
     max-width: 1366px;
 }
