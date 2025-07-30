@@ -395,12 +395,14 @@ body .button:not(header .button):not(footer .button) {
         padding: 12px 0;
         max-width: 1366px;
         margin: 0 auto;
+        overflow-y: auto;
+        scroll-behavior: smooth;
         
         > p:first-child {
             /* THAR Logo */
             margin: 0;
             flex-shrink: 0;
-            
+            padding-right: 190px;
             img {
                 width: 120px;
                 height: 20px;
@@ -410,7 +412,7 @@ body .button:not(header .button):not(footer .button) {
         
         .button-container {
             margin: 0;
-            
+            min-width: fit-content;
             .button {
                 background-color: transparent !important;
                 color: #c4c4c4 !important;
@@ -424,6 +426,7 @@ body .button:not(header .button):not(footer .button) {
                 letter-spacing: 0.5px;
                 position: relative;
                 transition: color .15s ease-in-out !important;
+                
                 
                 &::before {
                     display: none !important;
