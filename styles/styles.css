@@ -250,7 +250,6 @@ h1, h2, h3, h4, h5, h6 {
 .section .default-content-wrapper h4::after,
 .section .default-content-wrapper h5::after,
 .section .default-content-wrapper h6::after {
-    border-bottom: 2px solid var(--color-brand-500);
     content: "";
     display: block;
     padding-top: 8px;
