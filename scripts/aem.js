@@ -613,7 +613,14 @@ function decorateSections(main) {
             .split(',')
             .filter((style) => style)
             .map((style) => toClassName(style.trim()));
-          styles.forEach((style) => section.classList.add(style));
+          styles.forEach((style) => {
+            if (style.startsWith('id-')) {
+              // Apply the string after 'id-' as the id attribute
+              section.id = style.substring(3);
+            } else {
+              section.classList.add(style);
+            }
+          });
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
