@@ -367,3 +367,111 @@ body .button:not(header .button):not(footer .button) {
          }
      }
 }
+
+/* In-Page Navigation Styles */
+.section.fixed-width-container.inpage-nav{
+    padding: 0;
+}
+.inpage-nav {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: #101014;
+    border-bottom: 1px solid #333;
+    
+    .default-content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        max-width: 1366px;
+        margin: 0 auto;
+        
+        > p:first-child {
+            /* THAR Logo */
+            margin: 0;
+            flex-shrink: 0;
+            
+            img {
+                width: 120px;
+                height: 20px;
+                object-fit: contain;
+            }
+        }
+        
+        .button-container {
+            margin: 0;
+            
+            .button {
+                background-color: transparent !important;
+                color: #c4c4c4 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 8px 16px !important;
+                font-family: Lato, sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                position: relative;
+                transition: color .15s ease-in-out !important;
+                
+                &::before {
+                    display: none !important;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 16px;
+                    right: 16px;
+                    height: 2px;
+                    background-color: #fff;
+                    transform: scaleX(0);
+                    transition: transform .15s ease-in-out;
+                }
+                
+                &:hover {
+                    color: #fff !important;
+                    background-color: transparent !important;
+                    
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+                
+                &.active {
+                    color: #fff !important;
+                    
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (width < 900px) {
+        position: relative;
+        top: auto;
+        
+        .default-content-wrapper {
+            flex-direction: column;
+            gap: 16px;
+            
+            > p:first-child {
+                order: -1;
+            }
+            
+            .button-container {
+                display: inline-block;
+                
+                .button {
+                    font-size: 12px !important;
+                    padding: 6px 12px !important;
+                }
+            }
+        }
+    }
+}
