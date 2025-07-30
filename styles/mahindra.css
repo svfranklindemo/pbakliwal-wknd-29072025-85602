@@ -168,6 +168,10 @@ body .button:not(header .button):not(footer .button) {
             > div {
                 @media (width >= 900px) {
                     gap: 0px;
+                    > div{
+                        order: unset !important;
+                        flex: unset !important;
+                    }
             }
         }
             > div:first-child {
@@ -189,7 +193,7 @@ body .button:not(header .button):not(footer .button) {
                 /* Second column - Engine specifications */
                 display: flex;
                 flex-direction: row;
-                gap: 24px;
+                gap: 40px;
             }
             
             > div:nth-child(3) {
