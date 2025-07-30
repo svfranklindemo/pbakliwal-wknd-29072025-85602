@@ -128,7 +128,7 @@
 }
 
 /* Navigation Buttons */
-.carousel-navigation-buttons {
+.video-carousel-nav-buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,7 +140,7 @@
   pointer-events: none;
 }
 
-.carousel-navigation-buttons button {
+.video-carousel-nav-buttons button {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -156,17 +156,17 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-navigation-buttons button:hover {
+.video-carousel-nav-buttons button:hover {
   background: #fff;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-navigation-buttons button:active {
+.video-carousel-nav-buttons button:active {
   transform: scale(0.95);
 }
 
-.carousel-navigation-buttons svg {
+.video-carousel-nav-buttons svg {
   width: 20px;
   height: 20px;
 }
@@ -191,12 +191,12 @@
 
 /* Responsive Design */
 @media (width < 1200px) {
-  .carousel-navigation-buttons {
+  .video-carousel-nav-buttons {
     left: -40px;
     right: -40px;
   }
   
-  .carousel-navigation-buttons button {
+  .video-carousel-nav-buttons button {
     width: 40px;
     height: 40px;
   }
@@ -208,7 +208,7 @@
     gap: 16px;
   }
   
-  .carousel-navigation-buttons {
+  .video-carousel-nav-buttons {
     left: -30px;
     right: -30px;
   }
@@ -236,17 +236,17 @@
     gap: 16px;
   }
   
-  .carousel-navigation-buttons {
+  .video-carousel-nav-buttons {
     left: 10px;
     right: 10px;
   }
   
-  .carousel-navigation-buttons button {
+  .video-carousel-nav-buttons button {
     width: 36px;
     height: 36px;
   }
   
-  .carousel-navigation-buttons svg {
+  .video-carousel-nav-buttons svg {
     width: 16px;
     height: 16px;
   }
@@ -290,7 +290,7 @@
   outline-offset: 2px;
 }
 
-.carousel-navigation-buttons button:focus {
+.video-carousel-nav-buttons button:focus {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }

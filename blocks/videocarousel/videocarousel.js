@@ -285,7 +285,7 @@ export default async function decorate(block) {
   
   // Create navigation buttons
   const navButtons = document.createElement('div');
-  navButtons.classList.add('carousel-navigation-buttons');
+  navButtons.classList.add('video-carousel-nav-buttons');
   navButtons.innerHTML = `
     <button type="button" class="slide-prev" aria-label="${placeholders.previousSlide || 'Previous Slides'}">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
