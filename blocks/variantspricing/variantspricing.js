@@ -416,7 +416,7 @@ export default async function decorate(block) {
         <div class="variants-left">
           <div class="variants-filters-container"></div>
           <div class="car-image-container">
-            <img src="${variantsData.product.images.large[0].absURL}" 
+            <img src="https://main--pbakliwal-wknd-29072025-85602--svfranklindemo.aem.live/images/media_18ed05c2a07304cddbc405322d401d97343a28418.png" 
                  alt="${variantsData.product.productName}" 
                  class="car-image">
             <p class="disclaimer">*See Disclaimer</p>
