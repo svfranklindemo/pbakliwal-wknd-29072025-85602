@@ -1,0 +1,558 @@
+{
+    "action": "Product-Variation",
+    "queryString": "dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=1",
+    "locale": "en_IN",
+    "product": {
+      "uuid": "cb27e9caae1cffb80b47d4038e",
+      "id": "THRN",
+      "productName": "THAR",
+      "productType": "master",
+      "brand": null,
+      "price": {
+        "type": "range",
+        "min": {
+          "sales": {
+            "value": 1150001,
+            "currency": "INR",
+            "formatted": "₹ 11,50,001",
+            "decimalPrice": "1150001.00",
+            "minPriceFormatted": "₹11.50L"
+          },
+          "list": null
+        },
+        "max": {
+          "sales": {
+            "value": 1762000,
+            "currency": "INR",
+            "formatted": "₹ 17,62,000",
+            "decimalPrice": "1762000.00",
+            "maxPriceFormatted": "₹17.62L"
+          },
+          "list": null
+        },
+        "html": "    <div class=\"price\">\n        <span class=\"range\">\n    \n\n    \n    \n    <span>\n    \n        \n        <span class=\"sales\">\n            <span class=\"value p2-regular\" content=\"1150001.00\">\n                <span class=\"approx-price\">₹ 11,50,001\n\n</span>\n                <span class=\"sr-only\">\n                    to\n                </span>\n            </span>\n        </span>\n    \n        \n        \n        </span>\n    \n</span>\n\n</span>\n\n    </div>\n\n\n"
+      },
+      "renderedPrice": "    <div class=\"price\">\n        <span class=\"range\">\n    \n\n    \n    \n    <span>\n    \n        \n        <span class=\"sales\">\n            <span class=\"value p2-regular\" content=\"1150001.00\">\n                <span class=\"approx-price\">₹ 11,50,001\n\n</span>\n                <span class=\"sr-only\">\n                    to\n                </span>\n            </span>\n        </span>\n    \n        \n        \n        </span>\n    \n</span>\n\n</span>\n\n    </div>\n\n\n",
+      "images": {
+        "m_xsmall": [
+          {
+            "alt": "THAR",
+            "url": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=152&sh=86",
+            "absURL": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=152&sh=86",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "m_xxlarge": [
+          {
+            "alt": "THAR",
+            "url": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=360&sh=202",
+            "absURL": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=360&sh=202",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "m_xlarge": [
+          {
+            "alt": "THAR",
+            "url": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=320&sh=180",
+            "absURL": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=320&sh=180",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "small": [
+          {
+            "alt": "THAR",
+            "url": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw57f8f762/images/THRN/m_medium/Thar_286x124.png?sw=230&sh=100",
+            "absURL": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw57f8f762/images/THRN/m_medium/Thar_286x124.png?sw=230&sh=100",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "medium": [
+          {
+            "alt": "THAR",
+            "url": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=284&sh=160",
+            "absURL": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png?sw=284&sh=160",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "large": [
+          {
+            "alt": "THAR",
+            "url": "/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png",
+            "absURL": "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwbade0a62/images/THRN/large/LX_DeepForest_602x339.png",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "hires": [
+          {
+            "alt": "THAR",
+            "url": "/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw7fdbcd00/images/THRN/hires/LX_DeepForest_1366x443.png",
+            "absURL": "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw7fdbcd00/images/THRN/hires/LX_DeepForest_1366x443.png",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "m_hires": [
+          {
+            "alt": "THAR",
+            "url": "/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwab4301d8/images/THRN/m_hires/LX_DeepForest_360x266.png",
+            "absURL": "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwab4301d8/images/THRN/m_hires/LX_DeepForest_360x266.png",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "m_large": [
+          {
+            "alt": "THAR",
+            "url": "/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe5457e43/images/THRN/m_large/Thar_320x80.png",
+            "absURL": "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe5457e43/images/THRN/m_large/Thar_320x80.png",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "outdoorday": [
+          {
+            "alt": "THAR",
+            "url": "/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw11a4c717/images/Env_Day_1366x433.png",
+            "absURL": "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw11a4c717/images/Env_Day_1366x433.png",
+            "index": "0",
+            "title": "THAR"
+          }
+        ],
+        "outdoornight": [
+          {
+            "alt": "THAR",
+            "url": "/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb80bd591/images/Env_Night_1366x433.png",
+            "absURL": "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb80bd591/images/Env_Night_1366x433.png",
+            "index": "0",
+            "title": "THAR"
+          }
+        ]
+      },
+      "selectedQuantity": 1,
+      "minOrderQuantity": 1,
+      "maxOrderQuantity": 10,
+      "variationAttributes": [
+        {
+          "attributeId": "colorCode",
+          "displayName": "Product Color",
+          "id": "colorCode",
+          "swatchable": true,
+          "displayValue": "DEEP FOREST",
+          "values": [
+            {
+              "id": "A3DEEPFRST",
+              "description": null,
+              "displayValue": "DEEP FOREST",
+              "value": "A3DEEPFRST",
+              "selected": true,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=1",
+              "hexCode": "#282d22",
+              "images": {
+                "swatch": [
+                  {
+                    "alt": "DEEP FOREST",
+                    "url": "null",
+                    "absURL": "null",
+                    "index": "0",
+                    "title": "DEEP FOREST"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A3REDRAGE1",
+              "description": null,
+              "displayValue": "RED RAGE",
+              "value": "A3REDRAGE1",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3REDRAGE1&pid=THRN&quantity=1",
+              "hexCode": "#c20d0e",
+              "images": {
+                "swatch": [
+                  {
+                    "alt": "RED RAGE",
+                    "url": "null",
+                    "absURL": "null",
+                    "index": "0",
+                    "title": "RED RAGE"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A3EVRSTWHT",
+              "description": null,
+              "displayValue": "EVEREST WHITE",
+              "value": "A3EVRSTWHT",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3EVRSTWHT&pid=THRN&quantity=1",
+              "hexCode": "#cfcdcd",
+              "images": {
+                "swatch": [
+                  {
+                    "alt": "EVEREST WHITE",
+                    "url": "null",
+                    "absURL": "null",
+                    "index": "0",
+                    "title": "EVEREST WHITE"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A3STLTHBLK",
+              "description": null,
+              "displayValue": "STEALTH BLACK",
+              "value": "A3STLTHBLK",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3STLTHBLK&pid=THRN&quantity=1",
+              "hexCode": "#060505",
+              "images": {
+                "swatch": [
+                  {
+                    "alt": "STEALTH BLACK",
+                    "url": "null",
+                    "absURL": "null",
+                    "index": "0",
+                    "title": "STEALTH BLACK"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A3DARKGREY",
+              "description": null,
+              "displayValue": "DEEP GREY",
+              "value": "A3DARKGREY",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DARKGREY&pid=THRN&quantity=1",
+              "hexCode": "#575a63",
+              "images": {
+                "swatch": [
+                  {
+                    "alt": "DEEP GREY",
+                    "url": "null",
+                    "absURL": "null",
+                    "index": "0",
+                    "title": "DEEP GREY"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "attributeId": "fuelType",
+          "displayName": "Fuel Type",
+          "id": "fuelType",
+          "swatchable": false,
+          "displayValue": "",
+          "values": [
+            {
+              "id": "DIESEL",
+              "description": null,
+              "displayValue": "DIESEL",
+              "value": "DIESEL",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_fuelType=DIESEL&pid=THRN&quantity=1"
+            },
+            {
+              "id": "PETROL",
+              "description": null,
+              "displayValue": "PETROL",
+              "value": "PETROL",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_fuelType=PETROL&pid=THRN&quantity=1"
+            }
+          ],
+          "resetUrl": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_fuelType=&pid=THRN&quantity=1"
+        },
+        {
+          "attributeId": "variantCode",
+          "displayName": "Variation Code",
+          "id": "variantCode",
+          "swatchable": false,
+          "displayValue": "",
+          "values": [
+            {
+              "id": "M0736",
+              "description": null,
+              "displayValue": "LX D MT 4WD HT BS-6.2",
+              "value": "M0736",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0736&pid=THRN&quantity=1"
+            },
+            {
+              "id": "M0737",
+              "description": null,
+              "displayValue": "LX P MT 4WD HT BS-6.2",
+              "value": "M0737",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0737&pid=THRN&quantity=1"
+            },
+            {
+              "id": "M0739",
+              "description": null,
+              "displayValue": "LX D AT 4WD HT BS-6.2",
+              "value": "M0739",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0739&pid=THRN&quantity=1"
+            },
+            {
+              "id": "M0741",
+              "description": null,
+              "displayValue": "LX P AT 4WD HT BS-6.2",
+              "value": "M0741",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0741&pid=THRN&quantity=1"
+            },
+            {
+              "id": "M0743",
+              "description": null,
+              "displayValue": "AX OPT D MT 2WD HT BS-6.2",
+              "value": "M0743",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0743&pid=THRN&quantity=1"
+            },
+            {
+              "id": "M0744",
+              "description": null,
+              "displayValue": "LX D MT 2WD HT BS-6.2",
+              "value": "M0744",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0744&pid=THRN&quantity=1"
+            },
+            {
+              "id": "M0745",
+              "description": null,
+              "displayValue": "BS-6.2 LX P AT 2WD HT",
+              "value": "M0745",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=M0745&pid=THRN&quantity=1"
+            }
+          ],
+          "resetUrl": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_variantCode=&pid=THRN&quantity=1"
+        },
+        {
+          "attributeId": "bodyType",
+          "displayName": "Body Type",
+          "id": "bodyType",
+          "swatchable": false,
+          "displayValue": "HARD TOP",
+          "values": [
+            {
+              "id": "HARD TOP",
+              "description": null,
+              "displayValue": "HARD TOP",
+              "value": "HARD TOP",
+              "selected": true,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&pid=THRN&quantity=1"
+            }
+          ],
+          "resetUrl": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&pid=THRN&quantity=1"
+        },
+        {
+          "attributeId": "gearBoxType",
+          "displayName": "Transmission",
+          "id": "gearBoxType",
+          "swatchable": false,
+          "displayValue": "",
+          "values": [
+            {
+              "id": "MANUAL",
+              "description": null,
+              "displayValue": "MANUAL",
+              "value": "MANUAL",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_gearBoxType=MANUAL&pid=THRN&quantity=1"
+            },
+            {
+              "id": "AUTOMATIC",
+              "description": null,
+              "displayValue": "AUTOMATIC",
+              "value": "AUTOMATIC",
+              "selected": false,
+              "selectable": true,
+              "url": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_gearBoxType=AUTOMATIC&pid=THRN&quantity=1"
+            }
+          ],
+          "resetUrl": "https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&A3DEEPFRST&dwvar_THRN_gearBoxType=&pid=THRN&quantity=1"
+        }
+      ],
+      "longDescription": null,
+      "shortDescription": null,
+      "rating": 4.7,
+      "promotions": null,
+      "attributes": [
+        {
+          "ID": "customAttributes",
+          "name": "customAttributes",
+          "attributes": [
+            {
+              "label": "Drive Type",
+              "value": [
+                "2WD"
+              ]
+            },
+            {
+              "label": "Transmission Type -- Not In Use",
+              "value": [
+                "Automatic"
+              ]
+            }
+          ]
+        },
+        {
+          "ID": "engineAndTransmission",
+          "name": "Engine and Transmission",
+          "attributes": [
+            {
+              "label": "Drive Type",
+              "value": [
+                "2WD"
+              ]
+            }
+          ]
+        }
+      ],
+      "availability": {
+        "messages": [
+          "In Stock"
+        ],
+        "inStockDate": null
+      },
+      "available": true,
+      "options": [],
+      "quantities": [
+        {
+          "value": "1",
+          "selected": true,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=1"
+        },
+        {
+          "value": "2",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=2"
+        },
+        {
+          "value": "3",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=3"
+        },
+        {
+          "value": "4",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=4"
+        },
+        {
+          "value": "5",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=5"
+        },
+        {
+          "value": "6",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=6"
+        },
+        {
+          "value": "7",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=7"
+        },
+        {
+          "value": "8",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=8"
+        },
+        {
+          "value": "9",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=9"
+        },
+        {
+          "value": "10",
+          "selected": false,
+          "url": "/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&pid=THRN&quantity=10"
+        }
+      ],
+      "selectedProductUrl": "/suv/thar/THRN.html?dwvar_THRN_bodyType=HARD%20TOP&dwvar_THRN_colorCode=A3DEEPFRST&quantity=1",
+      "readyToOrder": false,
+      "online": true,
+      "pageTitle": "Mahindra Thar SUV - Price, Specs, Images & Colors | 3-Door",
+      "pageDescription": "Mahindra Thar SUV price in India. Explore Thar (4x4) 3 door model specifications, performance, reviews, images & variant pricing (cost). Book a test drive now!",
+      "pageKeywords": null,
+      "pageMetaTags": [],
+      "template": null,
+      "attributesHtml": "    <div class=\"col-sm-12 col-md-4 col-lg-3\">\n        <button class=\"title btn text-left btn-block d-sm-none\"\n                aria-expanded=\"false\" aria-controls=\"collapsible-attributes-1\"\n        >\n            Attributes\n        </button>\n        <h2 class=\"title d-none d-sm-block\">\n            Attributes\n        </h2>\n    </div>\n    <div class=\"col-sm-12 col-md-8 col-lg-9 value content\" id=\"collapsible-attributes-1\">\n        \n            \n                <h3 class=\"attribute-name\">\n                    customAttributes\n                </h3>\n                <ul>\n                    \n                        <li class=\"attribute-values\">\n                            Drive Type:\n                            \n                                2WD\n                            \n                        </li>\n                    \n                        <li class=\"attribute-values\">\n                            Transmission Type -- Not In Use:\n                            \n                                Automatic\n                            \n                        </li>\n                    \n                </ul>\n            \n        \n            \n                <h3 class=\"attribute-name\">\n                    Engine and Transmission\n                </h3>\n                <ul>\n                    \n                        <li class=\"attribute-values\">\n                            Drive Type:\n                            \n                                2WD\n                            \n                        </li>\n                    \n                </ul>\n            \n        \n    </div>\n\n\n",
+      "promotionsHtml": "",
+      "optionsHtml": "",
+      "variantCardHtml": [
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0736\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 16,12,000\" data-variantName=\"LX DIESEL 4WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0736&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0736\" id=\"input-M0736\"/>\n        <div class=\"card-small\">LX DIESEL 4WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 16,12,000</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#575a63;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#cfcdcd;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Touchscreen, DRL, Alloys</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R18 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">ESP, Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>",
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0737\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 15,20,000\" data-variantName=\"LX PETROL 4WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0737&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0737\" id=\"input-M0737\"/>\n        <div class=\"card-small\">LX PETROL 4WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 15,20,000</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#575a63;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#cfcdcd;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Touchscreen, DRL, Alloys</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R18 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">ESP, Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>",
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0739\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 17,62,000\" data-variantName=\"LX DIESEL 4WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0739&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0739\" id=\"input-M0739\"/>\n        <div class=\"card-small\">LX DIESEL 4WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 17,62,000</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#cfcdcd;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#575a63;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Touchscreen, DRL, Alloys</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R18 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">ESP, Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>",
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0741\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 16,80,000\" data-variantName=\"LX PETROL 4WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0741&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0741\" id=\"input-M0741\"/>\n        <div class=\"card-small\">LX PETROL 4WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 16,80,000</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#575a63;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#cfcdcd;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Touchscreen, DRL, Alloys</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R18 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">ESP, Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>",
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0743\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 11,50,001\" data-variantName=\"AX OPT DIESEL 2WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0743&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0743\" id=\"input-M0743\"/>\n        <div class=\"card-small\">AX OPT DIESEL 2WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 11,50,001</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Keyless Entry (HT)</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats, ESP</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R16 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>",
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0744\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 13,16,000\" data-variantName=\"LX DIESEL 2WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0744&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0744\" id=\"input-M0744\"/>\n        <div class=\"card-small\">LX DIESEL 2WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 13,16,000</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#575a63;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#cfcdcd;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Touchscreen, DRL, Alloys</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R18 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">ESP, Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>",
+        "<div class=\"variantslider_single\">\n    \n    <div class=\"item-card  \" data-modelId=\"M0745\">\n        <input type=\"radio\"  class=\"js-radio \" name=\"itemCard\" href=\"#design\" data-priceObj=\"₹ 14,42,000\" data-variantName=\"LX PETROL 2WD HT\" value=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;A3DEEPFRST&amp;dwvar_THRN_variantCode=M0745&amp;pid=THRN&amp;quantity=1\" data-attr-value=\"M0745\" id=\"input-M0745\"/>\n        <div class=\"card-small\">LX PETROL 2WD HT\n        \n        </div>\n        <div class=\"variant-price\">\n            <p class=\"variant-price-text\">Ex-Showroom Price</p>\n            <p class=\"variant-price-amount\">\n                <span class=\"approx-price\">₹ 14,42,000</span>\n                \n            </p>\n        </div>\n        <div class=\"variant-available-colors\">\n            <p class=\"variant-available-colors-text\">Available Colours</p>\n            <ul class=\"variant-colors\">\n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#575a63;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#060505;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#282d22;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#cfcdcd;\"></li>\n                    \n                \n                    \n                        \n                    \n                    \n                        <li style=\"background:#c20d0e;\"></li>\n                    \n                \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                \n                    \n                        \n                    \n                    \n                  \n            </ul>\n        </div>\n        <hr />\n        <div class=\"features\">\n            \n                \n                \n\n                <ul>\n                    \n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">HVAC, Touchscreen, DRL, Alloys</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">Front Facing Rear-Seats</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">BLD & R18 A/T Tyres</span></li>\n                        \n                    \n                        \n                            <li><span class=\"p4-regular\">ESP, Roll Cage, 2 Airbags, ABS</span></li>\n                        \n                    \n                </ul>\n\n            \n        </div>\n        \n    </div>\n</div>"
+      ],
+      "rangePriceUpdate": "₹ 11,50,001 - ₹ 17,62,000",
+      "variantsCount": 7
+    },
+    "resources": {
+      "info_selectforstock": "Select Styles for Availability",
+      "assistiveSelectedText": "selected"
+    },
+    "colorHtml": "    \n    \n                \n\n                    <!-- Select <Attribute> Label -->\n                    <span class=\"colorCode non-input-label\">\n                        Select Product Color\n                    </span>\n\n                    <!-- Circular Swatch Image pdict.attribute Values -->\n                    \n                        \n                            \n                                <button class=\"color-attribute selected selectable\"\n                                        aria-label=\"Select Product Color DEEP FOREST\"\n                                        aria-describedby=\"A3DEEPFRST\"\n                                        data-url=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;dwvar_THRN_colorCode=A3DEEPFRST&amp;pid=THRN&amp;quantity=1\"\n                                title=\"DEEP FOREST\">\n                                \n                                \n                                    \n                                \n                                                    \n                                    <span data-attr-value=\"A3DEEPFRST\"\n                                        class=\"\n                                            colorCode-value\n                                            swatch-circle\n                                            swatch-value\n                                            selected\n                                            selectable\n                                        \"\n                                        style=\"\n                                        \n                                        background:#282d22\n                                        \n                                        \">\n                                    </span>\n                                    <span id=\"A3DEEPFRST\" class=\"sr-only selected-assistive-text\">\n                                    DEEP FOREST\n                                    </span>\n                                </button>\n                                            \n                        \n                    \n                        \n                            \n                                <button class=\"color-attribute  selectable\"\n                                        aria-label=\"Select Product Color RED RAGE\"\n                                        aria-describedby=\"A3REDRAGE1\"\n                                        data-url=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;dwvar_THRN_colorCode=A3REDRAGE1&amp;pid=THRN&amp;quantity=1\"\n                                title=\"RED RAGE\">\n                                \n                                \n                                    \n                                \n                                                    \n                                    <span data-attr-value=\"A3REDRAGE1\"\n                                        class=\"\n                                            colorCode-value\n                                            swatch-circle\n                                            swatch-value\n                                            \n                                            selectable\n                                        \"\n                                        style=\"\n                                        \n                                        background:#c20d0e\n                                        \n                                        \">\n                                    </span>\n                                    <span id=\"A3REDRAGE1\" class=\"sr-only selected-assistive-text\">\n                                    RED RAGE\n                                    </span>\n                                </button>\n                                            \n                        \n                    \n                        \n                            \n                                <button class=\"color-attribute  selectable\"\n                                        aria-label=\"Select Product Color EVEREST WHITE\"\n                                        aria-describedby=\"A3EVRSTWHT\"\n                                        data-url=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;dwvar_THRN_colorCode=A3EVRSTWHT&amp;pid=THRN&amp;quantity=1\"\n                                title=\"EVEREST WHITE\">\n                                \n                                \n                                    \n                                \n                                                    \n                                    <span data-attr-value=\"A3EVRSTWHT\"\n                                        class=\"\n                                            colorCode-value\n                                            swatch-circle\n                                            swatch-value\n                                            \n                                            selectable\n                                        \"\n                                        style=\"\n                                        \n                                        background:#cfcdcd\n                                        \n                                        \">\n                                    </span>\n                                    <span id=\"A3EVRSTWHT\" class=\"sr-only selected-assistive-text\">\n                                    EVEREST WHITE\n                                    </span>\n                                </button>\n                                            \n                        \n                    \n                        \n                            \n                                <button class=\"color-attribute  selectable\"\n                                        aria-label=\"Select Product Color STEALTH BLACK\"\n                                        aria-describedby=\"A3STLTHBLK\"\n                                        data-url=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;dwvar_THRN_colorCode=A3STLTHBLK&amp;pid=THRN&amp;quantity=1\"\n                                title=\"STEALTH BLACK\">\n                                \n                                \n                                    \n                                \n                                                    \n                                    <span data-attr-value=\"A3STLTHBLK\"\n                                        class=\"\n                                            colorCode-value\n                                            swatch-circle\n                                            swatch-value\n                                            \n                                            selectable\n                                        \"\n                                        style=\"\n                                        \n                                        background:#060505\n                                        \n                                        \">\n                                    </span>\n                                    <span id=\"A3STLTHBLK\" class=\"sr-only selected-assistive-text\">\n                                    STEALTH BLACK\n                                    </span>\n                                </button>\n                                            \n                        \n                    \n                        \n                            \n                                <button class=\"color-attribute  selectable\"\n                                        aria-label=\"Select Product Color DEEP GREY\"\n                                        aria-describedby=\"A3DARKGREY\"\n                                        data-url=\"https://auto.mahindra.com/on/demandware.store/Sites-amc-Site/en_IN/Product-Variation?dwvar_THRN_bodyType=HARD%20TOP&amp;dwvar_THRN_colorCode=A3DARKGREY&amp;pid=THRN&amp;quantity=1\"\n                                title=\"DEEP GREY\">\n                                \n                                \n                                    \n                                \n                                                    \n                                    <span data-attr-value=\"A3DARKGREY\"\n                                        class=\"\n                                            colorCode-value\n                                            swatch-circle\n                                            swatch-value\n                                            \n                                            selectable\n                                        \"\n                                        style=\"\n                                        \n                                        background:#575a63\n                                        \n                                        \">\n                                    </span>\n                                    <span id=\"A3DARKGREY\" class=\"sr-only selected-assistive-text\">\n                                    DEEP GREY\n                                    </span>\n                                </button>\n                                            \n                        \n                    \n                    \n                        \n                    \n                        \n                    \n                        \n                    \n                        \n                    \n                        \n                    \n\n                \n    ",
+    "refinements": {},
+    "productSearches": {
+      "pageSize": 150,
+      "productSearch": {},
+      "isSearchSuggestionsAvailable": false,
+      "pageNumber": 0,
+      "count": 0,
+      "isCategorySearch": true,
+      "isRefinedCategorySearch": true,
+      "searchKeywords": null,
+      "resetLink": {},
+      "bannerImageUrl": null,
+      "productIds": [],
+      "productSort": {
+        "options": [],
+        "ruleId": null
+      },
+      "showMoreUrl": "",
+      "permalink": "https://auto.mahindra.com/suvs/thar?prefn1=bodyType&prefn2=colorCode&prefv1=HARD%20TOP&prefv2=A3DEEPFRST&start=0&sz=150",
+      "category": {
+        "name": "Thar",
+        "id": "THRN",
+        "pageTitle": null,
+        "pageDescription": null,
+        "pageKeywords": null
+      },
+      "pageMetaTags": [],
+      "cachedRefinements": []
+    },
+    "pid": "THRN"
+  }
