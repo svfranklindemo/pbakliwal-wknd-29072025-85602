@@ -94,7 +94,7 @@ body .button:not(header .button):not(footer .button) {
             
             .accordion-item-label {
                 position: relative;
-                padding: 24px 60px 24px 0;
+                padding: 32px 60px 32px 0;
                 cursor: pointer;
                 list-style: none;
                 background: transparent;
@@ -121,8 +121,8 @@ body .button:not(header .button):not(footer .button) {
                     align-items: center;
                     justify-content: center;
                     color: #fff;
-                    font-size: 24px;
-                    font-weight: 300;
+                    font-size: 40px;
+                    font-weight:100;
                     transition: transform 0.3s ease;
                 }
                 
@@ -141,7 +141,7 @@ body .button:not(header .button):not(footer .button) {
             }
             
             .accordion-item-body {
-                padding: 0 0 24px 0;
+                padding: 0 0 32px 0;
                 color: #c4c4c4;
                 font-family: lato, sans-serif;
                 font-weight: 400;
