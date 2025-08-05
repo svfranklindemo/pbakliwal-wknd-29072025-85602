@@ -6,9 +6,8 @@
 .columns img {
   width: 100%;
 }
-
-.columns > div > div {
-  order: 1;
+.footer-wrapper .columns img {
+  width: auto;
 }
 
 .columns > div > .columns-img-col {

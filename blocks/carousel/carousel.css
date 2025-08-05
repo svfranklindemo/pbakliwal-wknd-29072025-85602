@@ -165,6 +165,95 @@
 .section.hero-carousel video {
   height: 124% !important;
 }
+
+/* Mahindra-style hero carousel transition effects */
+.section.hero-carousel .carousel-slide .carousel-slide-image picture > img,
+.section.hero-carousel .carousel-slide .carousel-slide-image > video {
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.section.hero-carousel .carousel-slide[aria-hidden="false"] .carousel-slide-image picture > img,
+.section.hero-carousel .carousel-slide[aria-hidden="false"] .carousel-slide-image > video {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Enhanced slide transitions */
+.section.hero-carousel .carousel-slide {
+  transition: all 0.5s ease;
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+.section.hero-carousel .carousel-slide[aria-hidden="false"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Content fade-in animation */
+.section.hero-carousel .carousel-slide .carousel-slide-content {
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section.hero-carousel .carousel-slide[aria-hidden="false"] .carousel-slide-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth navigation button transitions */
+.section.hero-carousel .carousel-navigation-buttons button {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.section.hero-carousel .carousel-navigation-buttons button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Smooth indicator transitions */
+.section.hero-carousel .carousel-slide-indicator button {
+  transition: all 0.3s ease;
+}
+
+.section.hero-carousel .carousel-slide-indicator button:disabled {
+  transform: scale(1.2);
+}
+
+/* Enhanced slide change animations */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05) translateY(-20px);
+  }
+}
+
+.section.hero-carousel .carousel-slide[aria-hidden="true"] {
+  animation: slideFadeOut 0.5s ease forwards;
+}
+
+.section.hero-carousel .carousel-slide[aria-hidden="false"] {
+  animation: slideFadeIn 0.5s ease forwards;
+}
 @media (width >= 600px) {
   .carousel .carousel-navigation-buttons {
     bottom: 50px;
@@ -185,4 +274,166 @@
   .carousel .carousel-slide .carousel-slide-content[data-align="justify"] {
     --slide-content-width: auto;
   }
+}
+
+
+
+.carousel.interior.block .carousel-slide .carousel-slide-image picture {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel.interior.block .carousel-slide .carousel-slide-image picture > img,
+.carousel.interior.block .carousel-slide .carousel-slide-image > video {
+  position: relative;
+  inset: auto;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel.interior.block .carousel-slide {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: auto;
+  padding: 2rem 0;
+}
+
+.carousel.interior.block .carousel-slide .carousel-slide-content {
+  position: relative;
+  margin: 1rem 0 0 0;
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.carousel.interior.block .carousel-slide-indicators {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin-top: 0;
+  z-index: 10;
+}
+
+/* Fix arrow positioning for interior carousel */
+.carousel.interior.block .carousel-navigation-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  justify-content: center;
+  margin-top: 0;
+  z-index: 10;
+}
+
+/* Responsive adjustments for interior carousel */
+@media (width >= 600px) {
+  .carousel.interior.block .carousel-slide {
+    padding: 3rem 0;
+  }
+  
+  .carousel.interior.block .carousel-slide .carousel-slide-content {
+    margin: 2rem 0 0 0;
+    padding: 1.5rem 3rem;
+  }
+  
+  .carousel.interior.block .carousel-slide-indicators {
+    margin-top: 0;
+    left: 30px;
+    bottom: 30px;
+  }
+  
+  .carousel.interior.block .carousel-navigation-buttons {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+.carousel.exterior.block .carousel-slide .carousel-slide-image picture {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel.exterior.block .carousel-slide .carousel-slide-image picture > img,
+.carousel.exterior.block .carousel-slide .carousel-slide-image > video {
+  position: relative;
+  inset: auto;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel.exterior.block .carousel-slide {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: auto;
+  padding: 2rem 0;
+}
+
+.carousel.exterior.block .carousel-slide .carousel-slide-content {
+  position: relative;
+  margin: 1rem 0 0 0;
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.carousel.exterior.block .carousel-slide-indicators {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin-top: 0;
+  z-index: 10;
+}
+
+/* Fix arrow positioning for exterior carousel */
+.carousel.exterior.block .carousel-navigation-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  justify-content: center;
+  margin-top: 0;
+  z-index: 10;
+}
+
+/* Responsive adjustments for exterior carousel */
+@media (width >= 600px) {
+  .carousel.exterior.block .carousel-slide {
+    padding: 3rem 0;
+  }
+  
+  .carousel.exterior.block .carousel-slide .carousel-slide-content {
+    margin: 2rem 0 0 0;
+    padding: 1.5rem 3rem;
+  }
+  
+  .carousel.exterior.block .carousel-slide-indicators {
+    margin-top: 0;
+    left: 30px;
+    bottom: 30px;
+  }
+  
+  .carousel.exterior.block .carousel-navigation-buttons {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+.carousel.interior.block .carousel-slide .carousel-slide-content,
+.carousel.exterior.block .carousel-slide .carousel-slide-content{
+
+  max-width: fit-content;
+  text-align: left;
+
 }
