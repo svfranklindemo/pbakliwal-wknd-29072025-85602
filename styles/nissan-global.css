@@ -200,8 +200,11 @@ footer .footer {
     & .heading-list .columns.block {
         &>div {
             display: flex;
-            flex-direction: row;
-            align-items: start;
+                        flex-direction: row;
+                        align-items: start;
+                        border-bottom: 1px solid grey;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
 
             @media (width < 768px) {
                 flex-direction: column;

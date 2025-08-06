@@ -9,6 +9,7 @@ footer {
 footer .footer {
   max-width: var(--large-grid-layout);
   margin: auto;
+  max-width:1366px;
 }
 
 @media (width <= 900px) {
@@ -99,14 +100,19 @@ footer .wrapper .section.site-links .default-content-wrapper ul li a {
 .footer .wrapper .section.social-media .default-content-wrapper ul {
   background:var(--color-neutral-50);
 }
-
 .footer .wrapper .section.social-media img {
   padding: 0.85em 1em 0.6em;
   width: 24px;
   height: 24px;
   box-sizing: content-box;
 }
-
+footer .footer h2 strong {
+  color: #9d9d9d;
+  line-height: 22.2px;
+  font-weight: 700;
+  font-size: 19px;
+  
+}
 @media (width <= 900px) {
   .footer .wrapper .section.social-media img {
     padding: 0.5em 0.5em 0.2em;

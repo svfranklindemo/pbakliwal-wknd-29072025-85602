@@ -70,10 +70,124 @@ body .button:not(header .button):not(footer .button) {
     font-weight: 400;
     font-size: 16px;
     
-    .default-content-wrapper {
-        margin-bottom: 40px;
+   
+.book-now-btn.animated-button,
+.book-now-btn.btn.animated-button,
+.book-now-btn.btn-primary.animated-button {
+        border: none;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-family: Lato, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        min-width: 180px;
+        min-height: 48px;
+        background: #333;
+        color: #fff;
+        border: 2px solid #fff;
+}
+
+/* Preserve existing filter-btn styles and add animated button functionality */
+.filter-btn.animated-button,
+.fuel-btn.animated-button,
+.filter-btn.fuel-btn.animated-button {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         
-        h2 {
+        /* Face styles */
+        .face {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            gap: 10px;
+            transition: transform 0.7s ease-out;
+            padding: 14px 32px;
+        }
+        
+        /* Face 1 - Default state */
+        .face1 {
+            transform: translateY(0);
+        }
+        
+        /* Face 2 - Hover state */
+        .face2 {
+            transform: translateY(100%);
+            background: #fff;
+            color: #000;
+        }
+        
+        /* Hover animations */
+        &:not(.disabled):hover .face1,
+        &:not(:disabled):hover .face1 {
+            transform: translateY(-100%);
+        }
+        
+        &:not(.disabled):hover .face2,
+        &:not(:disabled):hover .face2 {
+            transform: translateY(0);
+        }
+        
+        /* Icon styling */
+        .icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            fill: currentColor;
+        }
+        
+        /* Text styling */
+        .p2-regular {
+            font-family: Lato, sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0;
+            white-space: nowrap;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Hover state */
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            border-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    }
+    
+    /* Filter button specific hover effects - preserve existing styles */
+    .filter-btn.animated-button,
+    .fuel-btn.animated-button,
+    .filter-btn.fuel-btn.animated-button {
+        &:hover {
+            /* Keep existing hover styles and add animation */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+}
+
+.mahindra-accordion {
+    h2 {
             color: #fff;
             font-family: lato, sans-serif;
             font-size: 32px;
@@ -398,6 +512,31 @@ body .button:not(header .button):not(footer .button) {
         overflow-y: auto;
         scroll-behavior: smooth;
         
+        /* Custom scrollbar styling for horizontal scroll */
+        &::-webkit-scrollbar {
+            height: 4px; /* Smaller height for horizontal scrollbar */
+            width: auto;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1); /* Light gray track */
+            border-radius: 2px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: #666; /* Darker gray thumb */
+            border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+            background: #888; /* Lighter on hover */
+        }
+        
+        /* Firefox scrollbar styling */
+        scrollbar-width: thin;
+        scrollbar-color: #666 rgba(255, 255, 255, 0.1);
+        
         > p:first-child {
             /* THAR Logo */
             margin: 0;
@@ -510,11 +649,14 @@ body .button:not(header .button):not(footer .button) {
         
         h3 {
             font-family: Lato, sans-serif;
-            font-size: 38px;
-            font-weight: 300;
-            color: #fff;
-            margin: 0 0 12px 0;
+            font-size: 30px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            letter-spacing: 2px;
             line-height: 36px;
+            margin: 0px 0px 24px;
+            padding-top: 18px;
         }
         
         p {
@@ -868,4 +1010,27 @@ body .button:not(header .button):not(footer .button) {
             }
         }
     }
+}
+
+button.filter-btn.arrow-right img.icon {
+    display: none;
+}
+.animated-button.filter-group.variant-level-filter .filter-btn{
+
+    margin-right: 10px;
+}
+.animated-button.active{
+      background: white !important;
+        color: black !important;
+    
+}
+h3#the-unstoppable-adventurer {
+    font-family: Lato, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 36px;
+    margin: 0px 0px 24px;
 }

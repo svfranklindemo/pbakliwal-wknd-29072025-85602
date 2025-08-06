@@ -4,7 +4,7 @@ header .header-nav-wrapper {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 999999;
   height: 68px;
   width: 100%;
   background: #000;
@@ -29,7 +29,6 @@ header .header-nav-wrapper {
 }
 
 header .header-nav-wrapper.minimized {
-  /* Keep existing minimized styles if needed */
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 8px 20px 0 rgba(0 0 0 / 26%);
 }

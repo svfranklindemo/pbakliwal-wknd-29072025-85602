@@ -373,11 +373,7 @@
   overflow: hidden;
 }
 
-.book-now-btn::before {
-  content: '→';
-  margin-right: 8px;
-  font-size: 16px;
-}
+
 
 .book-now-btn:hover {
   background-color: #f0f0f0;

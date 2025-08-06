@@ -201,6 +201,17 @@ export default async function decorate(block) {
   block.setAttribute('id', `carousel-${carouselId}`);
   const rows = block.querySelectorAll(':scope > div');
   const isSingleSlide = rows.length < 2;
+  
+  // Check if this is a merchandise carousel
+  const isMerchandiseCarousel = block.closest('#merchandise') !== null;
+  
+  console.log('Carousel debug:', {
+    carouselId,
+    rowsLength: rows.length,
+    isSingleSlide,
+    isMerchandiseCarousel,
+    blockId: block.id
+  });
 
   const placeholders = await fetchPlaceholders();
 
@@ -215,7 +226,8 @@ export default async function decorate(block) {
   block.prepend(slidesWrapper);
 
   let slideIndicators;
-  if (!isSingleSlide) {
+  // Always create indicators for merchandise carousel, even with single slide
+  if (!isSingleSlide || isMerchandiseCarousel) {
     const slideIndicatorsNav = document.createElement('nav');
     slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
     slideIndicators = document.createElement('ol');
@@ -231,6 +243,8 @@ export default async function decorate(block) {
     `;
 
     container.append(slideNavButtons);
+    
+    console.log('Created indicators and navigation for carousel:', carouselId);
   }
 
   rows.forEach((row, idx) => {
@@ -243,6 +257,7 @@ export default async function decorate(block) {
       indicator.dataset.targetSlide = idx;
       indicator.innerHTML = `<button type="button"><span>${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}</span></button>`;
       slideIndicators.append(indicator);
+      console.log('Created indicator for slide:', idx);
     }
     row.remove();
   });
@@ -250,13 +265,15 @@ export default async function decorate(block) {
   container.append(slidesWrapper);
   block.prepend(container);
 
-  if (!isSingleSlide) {
+  // Always bind events for merchandise carousel
+  if (!isSingleSlide || isMerchandiseCarousel) {
     bindEvents(block);
     // Load media for the first slide initially
     const firstSlide = block.querySelector('.carousel-slide');
     if (firstSlide) {
       loadSlideMedia(firstSlide);
     }
+    console.log('Bound events for carousel:', carouselId);
   } else {
     // For single slides, load media immediately
     const singleSlide = block.querySelector('.carousel-slide');

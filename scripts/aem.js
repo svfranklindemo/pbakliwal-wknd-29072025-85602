@@ -458,7 +458,55 @@ function init() {
   setup();
   sampleRUM('top');
 
-  window.addEventListener('load', () => sampleRUM('load'));
+  window.addEventListener('load', () => {
+    sampleRUM('load');
+    // Apply animated button effects to all variant-actions elements
+    decorateAnimatedButtons(document.body);
+  });
+
+  // Also apply on DOMContentLoaded for faster execution
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      decorateAnimatedButtons(document.body);
+    });
+  } else {
+    // DOM is already loaded
+    decorateAnimatedButtons(document.body);
+  }
+  
+  // Apply again after a short delay to ensure all content is loaded
+  setTimeout(() => {
+    decorateAnimatedButtons(document.body);
+  }, 1000);
+  
+  // Set up a MutationObserver to watch for DOM changes and reapply animated buttons
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            // Check if the added node contains book-now-btn or filter-btn
+            const hasAnimatedButtons = node.querySelector && (
+              node.querySelector('.book-now-btn') || 
+              node.querySelector('.filter-btn') ||
+              node.querySelector('.fuel-btn')
+            );
+            
+            if (hasAnimatedButtons) {
+              console.log('New animated buttons detected, reapplying...');
+              decorateAnimatedButtons(node);
+            }
+          }
+        });
+      }
+    });
+  });
+  
+  // Start observing the document body for changes
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 
   window.addEventListener('unhandledrejection', (event) => {
     sampleRUM('error', { source: event.reason.sourceURL, target: event.reason.line });
@@ -602,6 +650,9 @@ function decorateSections(main) {
     section.classList.add('section');
     section.dataset.sectionStatus = 'initialized';
     section.style.display = 'none';
+    
+    // Apply animated button effects to default-content-wrapper elements
+    decorateAnimatedButtons(section);
 
     // Process section metadata
     const sectionMeta = section.querySelector('div.section-metadata');
@@ -845,7 +896,233 @@ async function waitForLCP(lcpBlocks) {
   });
 }
 
+/**
+ * Transforms variant-actions elements into Mahindra-style animated buttons
+ * @param {Element} main The container element
+ */
+function decorateAnimatedButtons(main) {
+  // Target book-now-btn and filter-btn classes
+  const animatedButtons = main.querySelectorAll('.book-now-btn, .filter-btn');
+  
+  console.log('Found animated button elements:', animatedButtons.length);
+  
+  animatedButtons.forEach((button) => {
+    // Skip if already processed
+    if (button.classList.contains('animated-button')) {
+      console.log('Button already processed, skipping');
+      return;
+    }
+    
+    // Skip filter buttons within variant-level-filter
+    if (button.closest('.variant-level-filter')) {
+      console.log('Skipping filter button within variant-level-filter:', button.textContent.trim());
+      return;
+    }
+    
+    console.log('Processing button:', button.textContent.trim());
+      
+      // Get original content and attributes
+      const originalText = button.textContent.trim();
+      const originalHref = button.getAttribute('href') || '#';
+      const originalClasses = button.className;
+      const originalTitle = button.getAttribute('title') || button.getAttribute('aria-label') || originalText;
+      
+      // Determine button type and styling
+      let buttonType = 'btn-secondary';
+      if (button.classList.contains('book-now-btn')) {
+        buttonType = 'btn-primary';
+      } else if (button.classList.contains('filter-btn') || button.classList.contains('fuel-btn')) {
+        buttonType = 'btn-secondary';
+      } else if (button.classList.contains('specifications-link')) {
+        buttonType = 'btn-secondary';
+      }
+      
+      // Add animated button classes while preserving existing classes
+      const existingClasses = button.className.split(' ').filter(cls => cls !== 'animated-button');
+      button.className = `animated-button btn ${buttonType} arrow-right revert-icon-theme ${existingClasses.join(' ')}`;
+      button.setAttribute('title', originalTitle);
+      
+      // Force apply all necessary styles inline to ensure they work
+      button.style.display = 'inline-flex';
+      button.style.alignItems = 'center';
+      button.style.justifyContent = 'center';
+      button.style.gap = '8px';
+      button.style.padding = '14px 32px';
+      button.style.borderRadius = '50px';
+      button.style.cursor = 'pointer';
+      button.style.position = 'relative';
+      button.style.overflow = 'hidden';
+      button.style.minWidth = '180px';
+      button.style.minHeight = '48px';
+      button.style.fontFamily = 'Lato, sans-serif';
+      button.style.fontSize = '15px';
+      button.style.fontWeight = '600';
+      button.style.textAlign = 'center';
+      button.style.textDecoration = 'none';
+      button.style.border = 'none';
+      button.style.outline = 'none';
+      button.style.transition = 'all 0.3s ease';
+      
+      // Apply button variant styles - Mahindra color scheme
+      if (buttonType === 'btn-primary') {
+        button.style.backgroundColor = '#333';
+        button.style.color = '#fff';
+        button.style.border = '2px solid #fff';
+        // Add extra width for longer text
+        if (originalText.length > 8) {
+          button.style.minWidth = '200px';
+        }
+      } else {
+        button.style.backgroundColor = 'transparent';
+        button.style.color = '#fff';
+        button.style.border = '2px solid #fff';
+        // Add extra width for longer text
+        if (originalText.length > 15) {
+          button.style.minWidth = '220px';
+        }
+      }
+      
+      // Create face1 (default state)
+      const face1 = document.createElement('div');
+      face1.className = 'face1 face';
+      
+      // Apply inline styles to face1
+      face1.style.position = 'absolute';
+      face1.style.display = 'flex';
+      face1.style.alignItems = 'center';
+      face1.style.justifyContent = 'center';
+     
+      face1.style.width = '100%';
+      face1.style.height = '100%';
+      face1.style.gap = '10px';
+      face1.style.transition = 'transform 0.7s ease-out';
+      face1.style.transform = 'translateY(0)';
+      face1.style.padding = '14px 32px';
+      
+      // Add icon image
+      const icon1 = document.createElement('img');
+      icon1.className = 'icon';
+      icon1.src = '/icons/right-arrow.svg';
+      icon1.style.width = '18px';
+      icon1.style.height = '18px';
+      icon1.style.flexShrink = '0';
+      icon1.style.filter = 'brightness(0) invert(1)'; // Make it white
+      
+      // Add text span
+      const span1 = document.createElement('span');
+      span1.className = 'p2-regular';
+      span1.style.fontFamily = 'Lato, sans-serif';
+      span1.style.fontSize = '15px';
+      span1.style.fontWeight = '600';
+      span1.style.lineHeight = '1.4';
+      span1.style.margin = '0';
+      span1.style.whiteSpace = 'nowrap';
+      span1.style.letterSpacing = '0.3px';
+      span1.textContent = originalText;
+      
+      face1.appendChild(icon1);
+      face1.appendChild(span1);
+      
+      // Create face2 (hover state)
+      const face2 = document.createElement('div');
+      face2.className = 'face2 face';
+      
+            // Apply inline styles to face2
+      face2.style.position = 'absolute';
+      face2.style.display = 'flex';
+      face2.style.alignItems = 'center';
+      face2.style.justifyContent = 'center';
+     
+      face2.style.width = '100%';
+      face2.style.height = '100%';
+      face2.style.gap = '10px';
+      face2.style.transition = 'transform 0.7s ease-out';
+      face2.style.transform = 'translateY(100%)';
+      face2.style.padding = '14px 32px';
+      face2.style.backgroundColor = '#fff';
+      face2.style.color = '#000';
+      
+      // Add icon image for hover state
+      const icon2 = document.createElement('img');
+      icon2.className = 'icon';
+      icon2.src = '/icons/right-arrow.svg';
+      icon2.style.width = '18px';
+      icon2.style.height = '18px';
+      icon2.style.flexShrink = '0';
+      icon2.style.filter = 'brightness(0) invert(0)'; // Make it black for hover state
+      
+      // Add text span for hover state
+      const span2 = document.createElement('span');
+      span2.className = 'p2-regular';
+      span2.style.fontFamily = 'Lato, sans-serif';
+      span2.style.fontSize = '15px';
+      span2.style.fontWeight = '600';
+      span2.style.lineHeight = '1.4';
+      span2.style.margin = '0';
+      span2.style.whiteSpace = 'nowrap';
+      span2.style.color = '#000';
+      span2.style.letterSpacing = '0.3px';
+      span2.textContent = originalText;
+      
+      face2.appendChild(icon2);
+      face2.appendChild(span2);
+      
+      // Clear original content and add faces
+      button.innerHTML = '';
+      button.appendChild(face1);
+      button.appendChild(face2);
+      
+      // Add hover event listeners for animation with Mahindra styling
+      button.addEventListener('mouseenter', () => {
+        face1.style.transform = 'translateY(-100%)';
+        face2.style.transform = 'translateY(0)';
+        
+        // Apply hover styles
+        if (buttonType === 'btn-primary') {
+          button.style.backgroundColor = '#fff';
+          button.style.color = '#000';
+          button.style.borderColor = '#fff';
+          button.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        } else {
+          button.style.backgroundColor = '#fff';
+          button.style.color = '#000';
+          button.style.borderColor = '#fff';
+          button.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        }
+      });
+      
+      button.addEventListener('mouseleave', () => {
+        face1.style.transform = 'translateY(0)';
+        face2.style.transform = 'translateY(100%)';
+        
+        // Reset to default styles
+        if (buttonType === 'btn-primary') {
+          button.style.backgroundColor = '#333';
+          button.style.color = '#fff';
+          button.style.borderColor = '#fff';
+          button.style.boxShadow = 'none';
+        } else {
+          button.style.backgroundColor = 'transparent';
+          button.style.color = '#fff';
+          button.style.borderColor = '#fff';
+          button.style.boxShadow = 'none';
+        }
+      });
+      
+      console.log('Successfully transformed button:', originalText);
+    });
+  }
+
 init();
+
+// Make function available globally for testing and manual calls
+window.decorateAnimatedButtons = decorateAnimatedButtons;
+
+// Add a function to reapply animated buttons (useful for variant changes)
+window.reapplyAnimatedButtons = () => {
+  console.log('Manually reapplying animated buttons...');
+  decorateAnimatedButtons(document.body);
+};
 
 export {
   buildBlock,
@@ -871,4 +1148,5 @@ export {
   toClassName,
   updateSectionsStatus,
   waitForLCP,
+  decorateAnimatedButtons,
 };

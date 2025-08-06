@@ -166,7 +166,7 @@
   height: 124% !important;
 }
 
-/* Mahindra-style hero carousel transition effects */
+
 .section.hero-carousel .carousel-slide .carousel-slide-image picture > img,
 .section.hero-carousel .carousel-slide .carousel-slide-image > video {
   transition: all 0.5s ease;
@@ -436,4 +436,294 @@
   max-width: fit-content;
   text-align: left;
 
+}
+
+
+#merchandise .carousel {
+  background-color: #000;
+  padding: 3rem 0;
+  margin: 0;
+  color: #fff;
+}
+
+#merchandise .carousel .carousel-slides-container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+#merchandise .carousel .carousel-slides {
+  display: flex;
+  gap: 32px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#merchandise .carousel .carousel-slide {
+  flex: 0 0 calc(25% - 24px);
+  min-width: 280px;
+  max-width: 320px;
+  scroll-snap-align: start;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#merchandise .carousel .carousel-slide:hover {
+  transform: translateY(-8px);
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-image picture {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-image picture > img,
+#merchandise .carousel .carousel-slide .carousel-slide-image > video {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#merchandise .carousel .carousel-slide:hover .carousel-slide-image picture > img,
+#merchandise .carousel .carousel-slide:hover .carousel-slide-image > video {
+  transform: scale(1.05);
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-content {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  max-width: none;
+  z-index: 1;
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-content h1,
+#merchandise .carousel .carousel-slide .carousel-slide-content h2,
+#merchandise .carousel .carousel-slide .carousel-slide-content h3,
+#merchandise .carousel .carousel-slide .carousel-slide-content h4,
+#merchandise .carousel .carousel-slide .carousel-slide-content h5,
+#merchandise .carousel .carousel-slide .carousel-slide-content h6 {
+  font-family: 'Lato', sans-serif;
+
+ 
+  margin: 0;
+  color: #fff;
+  text-transform: none;
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-content p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #fff;
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-content a {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+#merchandise .carousel .carousel-slide .carousel-slide-content a:hover {
+  background: transparent;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Navigation buttons - positioned at bottom right */
+#merchandise .carousel .carousel-navigation-buttons {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  width: auto;
+  justify-content: flex-end;
+  padding: 0;
+  pointer-events: auto;
+}
+
+#merchandise .carousel .carousel-navigation-buttons button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+#merchandise .carousel .carousel-navigation-buttons button:hover {
+  background: transparent;
+  transform: scale(1.1);
+}
+
+#merchandise .carousel .carousel-navigation-buttons button.slide-prev::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url('/icons/left-arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0) invert(1);
+}
+
+#merchandise .carousel .carousel-navigation-buttons button.slide-next::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url('/icons/right-arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0) invert(1);
+}
+
+/* Indicators - positioned at bottom left */
+#merchandise .carousel .carousel-slide-indicators {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  margin: 0;
+  z-index: 10;
+}
+
+#merchandise .carousel .carousel-slide-indicator button {
+  width: 24px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #434343;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+#merchandise .carousel .carousel-slide-indicator button:disabled {
+  background-color: #fff;
+}
+
+#merchandise .carousel .carousel-slide-indicator button:hover {
+  background-color: #fff;
+}
+
+/* Navigation buttons - aligned with indicators */
+#merchandise .carousel .carousel-navigation-buttons {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  width: auto;
+  justify-content: flex-start;
+  padding: 0;
+  pointer-events: auto;
+  margin-left: 120px; /* Space for indicators */
+}
+
+/* Responsive design for merchandise carousel */
+@media (max-width: 991.98px) {
+  #merchandise .carousel .carousel-slide {
+    flex: 0 0 calc(50% - 16px);
+    min-width: 240px;
+  }
+  
+  #merchandise .carousel .carousel-navigation-buttons {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  #merchandise .carousel .carousel-slide-indicators {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #merchandise .carousel .carousel-slide {
+    flex: 0 0 calc(100% - 16px);
+    min-width: 280px;
+  }
+  
+  #merchandise .carousel .carousel-slides-container {
+    padding: 0 1rem;
+  }
+  
+  #merchandise .carousel .carousel-slide .carousel-slide-image {
+    height: 240px;
+  }
+  
+  #merchandise .carousel .carousel-navigation-buttons {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  #merchandise .carousel .carousel-slide-indicators {
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
+/* Hide scrollbar for merchandise carousel */
+#merchandise .carousel .carousel-slides::-webkit-scrollbar {
+  display: none;
+}
+
+#merchandise .carousel .carousel-slides {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
